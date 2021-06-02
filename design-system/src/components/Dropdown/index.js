@@ -13,11 +13,11 @@ import {
 } from "@reach/listbox";
 import "@reach/listbox/styles.css";
 
-/* Select
+/* Dropdown
  *
  * A dropdown list of values.
  */
-const Select = ({ defaultValue, options, ...props }) => {
+const Dropdown = ({ defaultValue, options, ...props }) => {
   if (!options) {
     return null;
   }
@@ -36,7 +36,7 @@ const Select = ({ defaultValue, options, ...props }) => {
   };
 
   return (
-    <StyledSelect
+    <StyledDropdown
       arrow={<Icon name="chevronDown" width={10} height={10} />}
       {...props}
     >
@@ -48,12 +48,12 @@ const Select = ({ defaultValue, options, ...props }) => {
         )}
         {options && renderOptions(options)}
       </>
-    </StyledSelect>
+    </StyledDropdown>
   );
 };
 
-Select.propTypes = {
-  /* text which will be always displayed by default. If omitted, first value is selected */
+Dropdown.propTypes = {
+  /* text which will be always displayed by default. If omitted, first value is Dropdowned */
   defaultValue: string,
   options: arrayOf(
     shape({
@@ -63,7 +63,7 @@ Select.propTypes = {
   ).isRequired,
 };
 
-export const StyledSelect = styled(Listbox)`
+export const StyledDropdown = styled(Listbox)`
   > [data-reach-listbox-button] {
     padding: 8px 16px;
     font-family: "DM Sans";
@@ -83,4 +83,4 @@ export const StyledSelect = styled(Listbox)`
   }
 `;
 
-export default Select;
+export default Dropdown;

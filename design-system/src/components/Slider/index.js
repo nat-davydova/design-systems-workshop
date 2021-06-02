@@ -5,13 +5,13 @@ import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import { arrayOf, shape, string } from "prop-types";
 
-/* Carousel
+/* Slider
  *
- * Simple carousel to display payment method options
+ * Simple Slider to display payment method options
  */
-const Carousel = ({ images, className, ...props }) => {
+const Slider = ({ images, className, ...props }) => {
   return (
-    <StyledCarousel className={className}>
+    <StyledSlider className={className}>
       <AwesomeSlider organicArrows={false} {...props}>
         {images &&
           images.map((image) => (
@@ -20,15 +20,15 @@ const Carousel = ({ images, className, ...props }) => {
             </div>
           ))}
       </AwesomeSlider>
-    </StyledCarousel>
+    </StyledSlider>
   );
 };
 
-Carousel.propTypes = {
+Slider.propTypes = {
   images: arrayOf(shape({ source: string })).isRequired,
 };
 
-const StyledCarousel = styled.div`
+const StyledSlider = styled.div`
   > .awssld {
     --control-bullet-color: "rgba(100, 116, 139, 1)";
     --control-bullet-active-color: "rgba(12, 17, 24, 1)";
@@ -63,4 +63,4 @@ const StyledCarousel = styled.div`
   }
 `;
 
-export default Carousel;
+export default Slider;

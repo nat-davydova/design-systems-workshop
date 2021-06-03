@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { string, shape, arrayOf } from "prop-types";
+import {colors, spacing, typography} from '../../tokens';
+import {spacing3XlTop, spacingLgTop} from '../../tokens/dist/spacing';
+import {shadowDefault0Color} from '../../tokens/dist/colors';
+import {headline6FontSize, headline6FontWeight, paragraph1FontSize} from '../../tokens/dist/typography';
 
 /* SummaryTable
  *
@@ -48,42 +52,42 @@ SummaryTable.propTypes = {
 const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
-  row-gap: 16px;
+  row-gap: ${spacing.spacingLgTop}
 `;
 
 const StyledBorder = styled.div`
   width: 100%;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.1);
-  margin: 32px 0;
+  background-color: ${colors.shadowDefault0Color};
+  margin: ${spacing.spacing3XlTop} 0;
 `;
 
 const StyledItemName = styled.p`
-  font-size: 18px;
-  line-height: 28px;
+  font-size: ${typography.paragraph1FontSize};
+  line-height: ${typography.paragraph1LineHeight};
 `;
 
 const StyledHeading = styled.h2`
-  margin-bottom: 30px;
+  margin-bottom: ${spacing.spacing3XlTop}
 `;
 
 const StyledPrice = styled.div`
   font-family: "DM Sans";
-  font-size: 14px;
-  font-weight: 700;
-  font-style: normal;
-  line-height: 24px;
-  letter-spacing: -0.3px;
+  font-size: ${typography.headline6FontSize};
+  font-weight: ${typography.headline6FontWeight};
+  font-style: ${typography.headline6FontStyle};
+  line-height: ${typography.headline6LineHeight};
+  letter-spacing: ${typography.headline6LetterSpacing};
   text-align: right;
 `;
 
 const StyledTotal = styled.div`
   font-family: "DM Sans";
-  font-size: 18px;
-  font-weight: 700;
-  font-style: normal;
-  line-height: 28px;
-  letter-spacing: -0.4px;
+  font-size: ${typography.paragraph1FontSize};
+  font-weight: ${typography.headline6FontWeight};
+  font-style: ${typography.paragraph1FontStyle};
+  line-height: ${typography.paragraph1LineHeight};
+  letter-spacing: ${typography.paragraph1LetterSpacing};
   text-align: right;
 `;
 

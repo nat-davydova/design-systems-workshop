@@ -3,7 +3,8 @@ import styled from "styled-components";
 import Button from "../Button";
 import Icon from "../Icon";
 import { bool, string, oneOf } from "prop-types";
-import { colors, typography as t } from "tokens";
+import {colors, typography as t, spacing, radius} from "../../tokens";
+import {spacing2XlTop, spacingBaseBottom, spacingMdLeft, spacingMdRight, spacingXlTop} from '../../tokens/dist/spacing';
 
 /* Card
  *
@@ -64,16 +65,16 @@ const StyledCard = styled.div`
     size === "small" &&
     `height: 100px; 
     flex-direction: row;`}
-  ${({ size }) => size === "big" && `margin-bottom: 40px;`}
+  ${({ size }) => size === "big" && `margin-bottom: ${spacing.spacing3XlBottom};`}
 `;
 
 const StyledCardImage = styled.img`
   max-width: 100%;
   max-height: 100%;
   margin-bottom: ${({ size }) =>
-    size === "big" ? "24px" : size === "small" ? "0px" : "16px"};
+    size === "big" ? spacing.spacing2XlBottom : size === "small" ? "0px" : spacing.spacingXlBottom};
   display: block;
-  border-radius: 32px;
+  border-radius: ${radius.radii32Radius};
 `;
 
 const StyledButton = styled(Button)`
@@ -81,7 +82,7 @@ const StyledButton = styled(Button)`
   top: 0;
   left: 0;
   z-index: 1;
-  margin: 24px;
+  margin: ${spacing.spacing2XlTop};
 `;
 
 const StyledCardInfo = styled.div`
@@ -91,7 +92,7 @@ const StyledCardInfo = styled.div`
     size == "small" &&
     `
      flex-grow: 1;
-     margin-left: 16px;
+     margin-left: ${spacing.spacingMdLeft};
      align-content: flex-start;
      max-width: 60%;`}
 `;
@@ -128,7 +129,7 @@ const StyledCardName = styled.h2`
         font-weight: ${t.headline4FontWeight};
         font-style: ${t.headline4FontStyle};
         letter-spacing: ${t.headline4LetterSpacing};
-        margin-bottom: 8px;
+        margin-bottom: ${spacing.spacingBaseBottom};
     `;
     } else {
       return `
@@ -141,7 +142,7 @@ const StyledCardName = styled.h2`
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        padding-right: 16px;
+        padding-right: ${spacing.spacingMdRight};
     `;
     }
   }}
@@ -149,7 +150,7 @@ const StyledCardName = styled.h2`
 
 const StyledCardPrice = styled.p`
   color: ${colors.primary500};
-  margin-top: 8px;
+  margin-top: ${spacing.spacingBaseTop};
   font-weight: 500;
   ${({ size }) => {
     if (size === "big") {
@@ -161,13 +162,13 @@ const StyledCardPrice = styled.p`
         font-style: ${t.headline2FontStyle};
         letter-spacing: ${t.headline1LetterSpacing};
         color: ${colors.primary500};
-        margin-top: 16px;`;
+        margin-top: ${spacing.spacingXlTop};`;
     } else if (size === "small") {
       return `
         color: ${colors.onBackground500}; 
         margin-top: 0; 
         margin-left: auto; 
-        font-weight: bold;`;
+        font-weight: ${t.headline2FontWeight};`;
     }
   }}
 `;

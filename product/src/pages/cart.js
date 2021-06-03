@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {Button, Menu, Icon, SummaryTable,Avatar, Card, colors} from "design-system";
+import {Button, Menu, Icon, SummaryTable,Avatar, Card, colors, spacing} from "design-system";
 import {Link} from "react-router-dom";
 
 const data = require("../data/data.js");
@@ -57,14 +57,14 @@ const Styledh1 = styled.h1`
 `;
 
 const StyledDiv5 = styled.div`
-  margin-top: 32px;
+  margin-top: ${spacing.spacing3XlTop}
 `;
 
 const StyledBorder = styled.div`
   width: 100%;
   height: 1px;
   background-color: ${colors.onSurface100};
-  margin: 32px 0;
+  margin: ${spacing.spacing3XlTop} 0;
 `;
 
 export default Cart;

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Icon, Button, colors } from "../..";
+import {spacing } from "../../tokens"
 
 /* ToolsPanel
  *
@@ -28,7 +29,7 @@ const ToolsPanel = () => (
 const StyledToolsPanel = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: ${spacing.spacing2XlTop};
 `;
 
 const StyledIconWrapper = styled.div`
@@ -39,7 +40,7 @@ const StyledIconWrapper = styled.div`
 const StyledButton = styled(Button)`
   padding: 0;
   border: 0;
-  margin: 0 8px;
+  margin: 0 ${spacing.spacingBaseTop};
   &:last-child {
     margin-right: 0;
   }
@@ -49,7 +50,7 @@ const StyledBorder = styled.div`
   width: 1px;
   height: 16px;
   background-color: ${colors.onSurface100};
-  margin: 0 8px;
+  margin: 0 ${spacing.spacingBaseTop};
 `;
 
 export default ToolsPanel;

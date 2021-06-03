@@ -6,5 +6,7 @@
 import * as colors from "./dist/colors";
 import * as typography from "./dist/typography";
 import * as spacing from "./dist/spacing";
+import * as radius from "./dist/radius";
+import * as boxShadow from "./dist/spacing";
 
-export { colors, typography, spacing };
+export { colors, typography, spacing, radius, boxShadow };

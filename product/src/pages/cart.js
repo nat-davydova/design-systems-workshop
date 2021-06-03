@@ -1,51 +1,51 @@
 import React from "react";
 import styled from "styled-components";
-import { Button, Icon, SummaryTable, colors } from "design-system";
-import { Link } from "react-router-dom";
+import {Button, Icon, SummaryTable,Avatar, Card, colors} from "design-system";
+import {Link} from "react-router-dom";
 
 const data = require("../data/data.js");
 const items = data.products;
 
 const Cart = ({
-  match: {
-    params: { id },
-  },
-}) => {
-  const item = items[id];
-  return (
-    <div>
-      <StyledDiv1>
-        <StyledDiv2>
-          <StyledImage1 src={data.user.avatar} />
-          <Button isOutline>
-            <Icon name="menu" />
-          </Button>
-        </StyledDiv2>
-        <Styledh1>Shopping Cart</Styledh1>
-        <StyledDiv3>
-          <StyledImg src={item.image} alt="" />
-          <StyledDiv4>
-            <Styledh6>{item.name}</Styledh6>
-            <Styledh62>{item.price}</Styledh62>
-            <StyledP>{item.description}</StyledP>
-          </StyledDiv4>
-        </StyledDiv3>
-        <StyledBorder />
-        <StyledDiv5>
-          <SummaryTable
-            items={[
-              { name: "Subtotal", price: item.price },
-              { name: "Estimated Delivery & Handling", price: "€0.00" },
-            ]}
-            total={item.price}
-          />
-          <Button as={Link} to="/checkout" isStretched>
-            Checkout
-          </Button>
-        </StyledDiv5>
-      </StyledDiv1>
-    </div>
-  );
+                  match: {
+                      params: {id},
+                  },
+              }) => {
+    const item = items[id];
+    console.log(data.user.avatar)
+    return (
+        <div>
+            <StyledDiv1>
+                <StyledDiv2>
+                    <Avatar src={data.user.avatar} />
+                    <Button isOutline>
+                        <Icon name="menu"/>
+                    </Button>
+                </StyledDiv2>
+                <Styledh1>Shopping Cart</Styledh1>
+                <Card
+                    description={item.description}
+                    image={item.image}
+                    name={item.name}
+                    price={item.price}
+                    size="small"
+                />
+                <StyledBorder/>
+                <StyledDiv5>
+                    <SummaryTable
+                        items={[
+                            {name: "Subtotal", price: item.price},
+                            {name: "Estimated Delivery & Handling", price: "€0.00"},
+                        ]}
+                        total={item.price}
+                    />
+                    <Button as={Link} to="/checkout" isStretched>
+                        Checkout
+                    </Button>
+                </StyledDiv5>
+            </StyledDiv1>
+        </div>
+    );
 };
 
 const StyledImage1 = styled.img`

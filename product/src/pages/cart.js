@@ -47,12 +47,6 @@ const Cart = ({
     );
 };
 
-const StyledImage1 = styled.img`
-  width: 48px;
-  height: 48px;
-  border-radius: 16px;
-`;
-
 const StyledDiv1 = styled.div`
   padding: 64px 40px;
 `;
@@ -62,48 +56,8 @@ const Styledh1 = styled.h1`
   letter-spacing: -1.6px;
 `;
 
-const StyledDiv2 = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
-`;
-
-const StyledDiv3 = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-const StyledDiv4 = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  align-items: center;
-  margin-left: 16px;
-  align-content: flex-start;
-`;
-
 const StyledDiv5 = styled.div`
   margin-top: 32px;
-`;
-
-const StyledImg = styled.img`
-  max-width: 100%;
-  width: 96px;
-  height: 100px;
-`;
-
-const Styledh6 = styled.h6`
-  max-width: 58%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  margin-right: auto;
-`;
-
-const Styledh62 = styled.h6`
-  font-weight: 700;
-`;
-const StyledP = styled.p`
-  opacity: 0.6;
 `;
 
 const StyledBorder = styled.div`

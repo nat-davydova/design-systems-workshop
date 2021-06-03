@@ -4,8 +4,7 @@
  */
 import React from "react";
 import styled from "styled-components";
-import { Button, Icon, colors, ToolsPanel, Menu, Avatar, Card } from "design-system";
-import { Link } from "react-router-dom";
+import { Button, Icon, ToolsPanel, Menu, Avatar, Card } from "design-system";
 
 const data = require("../data/data.js");
 

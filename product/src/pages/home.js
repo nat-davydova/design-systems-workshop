@@ -4,8 +4,7 @@
  */
 import React from "react";
 import styled from "styled-components";
-import { Button, Icon, colors, ToolsPanel, Menu, Avatar, Card } from "design-system";
-import { Link } from "react-router-dom";
+import { Button, Icon, colors, spacing, ToolsPanel, Menu, Avatar, Card } from "design-system";
 
 const data = require("../data/data.js");
 
@@ -53,7 +52,7 @@ const Styledh1 = styled.h1`
 const StyledDiv5 = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px 24px;
+  gap: ${spacing.spacing3XlTop} ${spacing.spacing2XlTop};
 `;
 
 export default Home;

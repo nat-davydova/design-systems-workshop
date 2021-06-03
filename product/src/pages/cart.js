@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {Button, Icon, SummaryTable,Avatar, Card, colors} from "design-system";
+import {Button, Menu, Icon, SummaryTable,Avatar, Card, colors} from "design-system";
 import {Link} from "react-router-dom";
 
 const data = require("../data/data.js");
@@ -12,16 +12,15 @@ const Cart = ({
                   },
               }) => {
     const item = items[id];
-    console.log(data.user.avatar)
     return (
         <div>
             <StyledDiv1>
-                <StyledDiv2>
-                    <Avatar src={data.user.avatar} />
-                    <Button isOutline>
-                        <Icon name="menu"/>
-                    </Button>
-                </StyledDiv2>
+                <Menu firstAction={<Avatar src={data.user.avatar} />}
+                      lastAction={
+                          <Button isOutline>
+                              <Icon name="menu" />
+                          </Button>
+                      } />
                 <Styledh1>Shopping Cart</Styledh1>
                 <Card
                     description={item.description}

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Icon, Button, colors } from "../..";
-console.log("🚀 ~ file: index.js ~ line 4 ~ Icon, Button", Icon, Button);
 
 /* ToolsPanel
  *

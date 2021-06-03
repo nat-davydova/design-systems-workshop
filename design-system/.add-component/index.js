@@ -63,7 +63,7 @@ export { ${tokens} } from "./tokens";\n\n`;
     .join("");
 
   const fileContent = `${fileComment}\n${exportStatements}`;
-s  fs.writeFile(`./src/index.js`, fileContent, writeFileErrorHandler);
+  fs.writeFile(`./src/index.js`, fileContent, writeFileErrorHandler);
 });
 
 console.log(`Created component ${name}`);

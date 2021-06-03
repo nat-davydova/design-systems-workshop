@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../Button";
+import {boxShadow} from '../../tokens';
 
 /* Notification
  *
@@ -22,7 +23,7 @@ const Notification = ({ as, props }) => {
 
 export const StyledNotification = styled.div`
   display: flex;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+  box-shadow: boxShadow.shadowSmOffsetX boxShadow.shadowSmOffsetY 3px 0px rgba(0, 0, 0, 0.1)},
     0px 1px 3px 0px rgba(0, 0, 0, 0.06);
   padding: 20px 24px;
   justify-content: space-between;

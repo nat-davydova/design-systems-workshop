@@ -4,7 +4,7 @@
  */
 import React from "react";
 import styled from "styled-components";
-import { Button, Icon, colors } from "design-system";
+import { Button, Icon, colors, ToolsPanel, Menu, Avatar, Card } from "design-system";
 import { Link } from "react-router-dom";
 
 const data = require("../data/data.js");
@@ -13,30 +13,24 @@ const Home = () => {
   return (
     <div>
       <StyledDiv1>
-        <StyledDiv2>
-          <StyledImage1 src={data.user.avatar} />
-          <Button isOutline>
-            <Icon name="menu" />
-          </Button>
-        </StyledDiv2>
+        <Menu firstAction={<Avatar src={data.user.avatar} />}
+              lastAction={
+                <Button isOutline>
+                  <Icon name="menu" />
+                </Button>
+              } />
         <Styledh1>Store</Styledh1>
 
-        <StyledDiv3>
-          <h4>All Product</h4>
+        <ToolsPanel />
 
-          <StyledDiv4>
-            <StyledButton color="transparent">
-              <Icon name="viewItem" width={24} height={16} />
-            </StyledButton>
-            <StyledButton color="transparent">
-              <Icon name="viewGrid" width={24} height={16} />
-            </StyledButton>
-            <StyledBorder />
-            <StyledButton color="transparent">
-              <Icon name="filter" width={24} height={16} />
-            </StyledButton>
-          </StyledDiv4>
-        </StyledDiv3>
+        <Card
+          description="Sweets"
+          image="static/media/productImageSample.6d52cab1.jpg"
+          name="Delicious Vanilla Cupcake"
+          price="€2.00"
+          size="small"
+        />
+
         <StyledDiv5>
           {Object.entries(data.products).map(([id, item]) => {
             return (

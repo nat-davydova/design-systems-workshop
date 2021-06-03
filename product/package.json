@@ -1,9 +1,9 @@
 {
   "name": "product",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "license": "MIT",
-  "homepage": "https://goright-io.github.io/hands-on-design-system/product",
+  "homepage": "https://nat-davydova.github.io/design-systems-workshop/product",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",

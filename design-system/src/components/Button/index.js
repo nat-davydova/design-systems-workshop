@@ -5,9 +5,10 @@
 
 import React from "react";
 import styled, { css } from "styled-components";
-import { colors } from "../../tokens";
+import { colors, typography } from "../../tokens";
 import { bool, string } from "prop-types";
 import { StyledIcon } from "../Icon";
+import {headline6FontSize} from '../../tokens/dist/typography';
 
 const Button = ({ as, label, children, ...props }) => {
   const isIcon = children?.type?.displayName === "Icon";
@@ -35,8 +36,8 @@ const StyledButton = styled.button`
   background-color: ${({ color }) => color};
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
   color: ${colors.background500};
-  font-size: 14px;
-  font-weight: 700;
+  font-size: ${typography.headline6FontSize};
+  font-weight: ${typography.headline6FontWeight};
   width: ${(p) => (p.isStretched ? "100%" : null)};
   ${({ isOutline }) =>
     isOutline &&

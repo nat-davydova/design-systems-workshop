@@ -4,6 +4,7 @@ import styled from "styled-components";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import { arrayOf, shape, string } from "prop-types";
+import {colors, spacing} from '../../tokens';
 
 /* Slider
  *
@@ -30,10 +31,10 @@ Slider.propTypes = {
 
 const StyledSlider = styled.div`
   > .awssld {
-    --control-bullet-color: "rgba(100, 116, 139, 1)";
-    --control-bullet-active-color: "rgba(12, 17, 24, 1)";
+    --control-bullet-color: ${colors.onSurface500};
+    --control-bullet-active-color: ${colors.onBackground500};
     --content-background-color: transparent;
-    --loader-bar-color: "rgba(255, 255, 255, 1)";
+    --loader-bar-color: ${colors.background500};
     --loader-bar-height: 1px;
   }
   .awssld__content > img,
@@ -53,7 +54,7 @@ const StyledSlider = styled.div`
     button {
       width: 8px;
       height: 8px;
-      margin: 0 4px;
+      margin: 0 ${spacing.spacingSmBottom};
       opacity: 0.6;
       border-radius: 50%;
     }

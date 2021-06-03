@@ -72,6 +72,13 @@ module.exports = {
             return prop.path[0] === "radii";
           },
         },
+        {
+          destination: "boxShadow.js",
+          format: "javascript/es6",
+          filter: function (prop) {
+            return prop.path[0] === "shadow";
+          },
+        },
       ],
     },
   },

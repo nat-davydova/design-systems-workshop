@@ -27,7 +27,7 @@ const Home = () => {
           {Object.entries(data.products).map(([id, item]) => {
             return (
               <Card
-                description={item.name}
+                description={item.description}
                 image={item.image}
                 name={item.name}
                 price={item.price}

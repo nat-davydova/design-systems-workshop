@@ -12,6 +12,8 @@ import {
   ListboxArrow,
 } from "@reach/listbox";
 import "@reach/listbox/styles.css";
+import {colors} from '../../tokens';
+import {onSurface900} from '../../tokens/dist/colors';
 
 /* Dropdown
  *
@@ -69,9 +71,9 @@ export const StyledDropdown = styled(Listbox)`
     font-family: "DM Sans";
     line-height: 24px;
     font-weight: bold;
-    border-color: "rgba(188, 199, 213, 1)";
+    border-color: ${colors.onSurface200};
     border-radius: 12px;
-    color: "rgba(12, 17, 24, 1)";
+    color: ${colors.onSurface900};
     position: relative;
     outline: none;
     align-items: baseline;
